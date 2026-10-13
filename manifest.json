@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.samcapshaw.mail",
+  "name": "Mail for Omarchy",
+  "version": "0.1.0",
+  "author": "Sam Capshaw",
+  "license": "MIT",
+  "description": "Open the separately installed Evolution for Omarchy mail and calendar app.",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {"service": "Service.qml", "barWidget": "BarWidget.qml"},
+  "barWidget": {
+    "displayName": "Mail",
+    "description": "Open Mail for Omarchy.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  },
+  "homepage": "https://github.com/samcapshaw/omarchy-mail"
+}
