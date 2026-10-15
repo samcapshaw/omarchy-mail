@@ -12,9 +12,10 @@ def find_app(home, configured=None):
         home / '.local/opt/evolution-personal',
     ]
     for prefix in prefixes:
-        app = prefix / 'bin/evolution'
-        if prefix.is_absolute() and app.is_file() and os.access(app, os.X_OK):
-            return app
+        for name in ('omarchy-mail', 'evolution'):
+            app = prefix / 'bin' / name
+            if prefix.is_absolute() and app.is_file() and os.access(app, os.X_OK):
+                return app
     return None
 
 

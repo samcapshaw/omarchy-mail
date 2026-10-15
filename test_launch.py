@@ -21,6 +21,10 @@ class LaunchTests(unittest.TestCase):
             self.assertIsNone(find_app(home, str(home / 'missing')))
             self.assertIsNone(find_app(home, 'relative/path'))
             self.assertEqual(find_app(home, str(app.parent.parent)), app)
+            wrapper = app.with_name('omarchy-mail')
+            wrapper.write_text('#!/bin/sh\nexit 0\n')
+            wrapper.chmod(0o755)
+            self.assertEqual(find_app(home), wrapper)
 
 
 if __name__ == '__main__':

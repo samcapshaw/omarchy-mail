@@ -40,7 +40,7 @@ omarchy plugin add https://github.com/samcapshaw/omarchy-mail.git --enable
 omarchy-shell omarchy-mail open
 ```
 
-An optional Mail button can be added through Omarchy's bar configuration. The plugin launches `~/.local/opt/evolution-omarchy/bin/evolution`, falling back to the existing `evolution-personal` prefix for earlier installations. To use another absolute prefix, set `EVOLUTION_OMARCHY_PREFIX` in the desktop session environment. A configured prefix does not fall back to another app if missing. The plugin does not start Mail automatically when enabled.
+An optional Mail button can be added through Omarchy's bar configuration. The plugin prefers the installed `bin/omarchy-mail` runtime wrapper when available, so bundled libraries and schemas are loaded together. Older installations use `~/.local/opt/evolution-omarchy/bin/evolution`, falling back to the existing `evolution-personal` prefix for earlier installations. To use another absolute prefix, set `EVOLUTION_OMARCHY_PREFIX` in the desktop session environment. A configured prefix does not fall back to another app if missing. The plugin does not start Mail automatically when enabled.
 
 ## Remove or recover
 
